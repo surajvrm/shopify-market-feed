@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
     }
 
     const csv = rows
-      .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))
+      .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(';'))
       .join('\n');
 
     const variantCount = variants.length;
