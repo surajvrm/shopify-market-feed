@@ -36,7 +36,7 @@
 //         ]);
 //       }
 //       const csv = rows
-//         .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))
+//         .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(';'))
 //         .join('\n');
 //       res.setHeader('Content-Type', 'text/csv; charset=utf-8');
 //       res.setHeader('Content-Disposition', 'attachment; filename="germany-feed.csv"');
@@ -436,7 +436,7 @@
 //         ]);
 //       }
 //       const csv = rows
-//         .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))
+//         .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(';'))
 //         .join('\n');
 
 //       res.setHeader('Content-Type', 'text/csv; charset=utf-8');
@@ -842,7 +842,7 @@ module.exports = async (req, res) => {
     }
 
     const csv = rows
-      .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(','))
+      .map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(';'))
       .join('\n');
 
     // res.setHeader('Content-Type', 'text/csv; charset=utf-8');
